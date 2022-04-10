@@ -3,7 +3,7 @@ import cors from 'cors';
 const app = express()
 const bodyParser = require('body-parser')
 app.use(cors())
-const port = 5005
+const port = process.env.PORT || 5005
 app.get('/', (req: Request, res: Response ) => {
     res.send('Hello World!')
 })
